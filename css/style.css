@@ -28,6 +28,8 @@ picture,
 svg,
 video {
   max-width: 100%;
+  /* aspect-ratio: 1; */
+  /* object-fit: cover; */
   display: block;
 }
 
@@ -39,3 +41,87 @@ body {
   line-height: 1.5;
 }
 
+/* block */
+.block {
+  padding: 5rem 2rem;
+}
+
+/* container */
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* btn */
+.btn {
+  display: block;
+  padding: 2rem 5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 1rem;
+  width: 100%;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--primary-2);
+  color: var(--primary-1);
+}
+
+/* hero */
+
+.hero .grid {
+  gap: 1rem;
+  justify-items: center;
+}
+
+.hero__img {
+  width: 26rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: center;
+}
+
+.hero__header {
+  text-align: center;
+}
+
+.hero .author {
+  color: var(--primary-2);
+  margin: 0;
+  font-size: 5rem;
+}
+
+.hero .job {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 768px) {
+  .hero__header {
+    text-align: start;
+  }
+
+  .hero .grid {
+    grid-template-columns: auto 1fr;
+    gap: 4rem;
+  }
+
+  .hero .btn {
+    width: max-content;
+  }
+}
