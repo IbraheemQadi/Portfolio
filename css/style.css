@@ -1,5 +1,5 @@
 :root {
-  --primary-1: #f2f2f2;
+  --primary-1: #fff; /* #f2f2f2*/
   --primary-2: #10637d; /* heading */
   --primary-3: #b3c3d7;
   --primary-4: #10f0fc;
@@ -12,6 +12,9 @@
   --fw-bold: 700;
   --fw-regular: 400;
   --fw-light: 300;
+
+  --box-shadow: #d7d7d7 0 0 20px;
+  --border-radius: 1rem;
 }
 
 html {
@@ -34,7 +37,7 @@ video {
 }
 
 body {
-  /* background-color: var(--primary-1); */
+  background-color: var(--primary-1);
   color: var(--dark-2);
   font-family: var(--ff-base);
   font-size: 2rem;
@@ -77,7 +80,7 @@ body {
   padding: 2rem 5rem;
   outline: 0;
   border: 0;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   width: 100%;
   text-decoration: none;
 }
@@ -151,9 +154,9 @@ body {
 /* project */
 .project {
   color: var(--dark-2);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: #d7d7d7 0 0 20px;
+  box-shadow: var(--box-shadow);
   transition: 0.2s ease-out;
 }
 
@@ -224,8 +227,8 @@ body {
 /* experience */
 
 .experience .job {
-  box-shadow: #d7d7d7 0 0 20px;
-  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   padding: 2.5rem;
 }
 
@@ -245,4 +248,36 @@ body {
 
 .experience .job__body li {
   margin-bottom: 1rem;
+}
+
+/* contact me */
+
+.contact input,
+textarea {
+  all: unset;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--primary-2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-transform: capitalize;
+  font-weight: var(--fw-regular);
+  font-size: 1.8rem;
+}
+
+.sender-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.sender-info > input {
+  width: 100%;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
 }
