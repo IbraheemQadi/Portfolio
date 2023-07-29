@@ -4,12 +4,14 @@
   --primary-3: #b3c3d7;
   --primary-4: #10f0fc;
   --dark-1: #1c2025;
-  --dark-2: #27282f;
+  --dark-2: #313131;
+  --dark-3: #27282f;
 
   --ff-base: "Ubuntu", sans-serif;
 
   --fw-bold: 700;
   --fw-regular: 400;
+  --fw-light: 300;
 }
 
 html {
@@ -28,8 +30,6 @@ picture,
 svg,
 video {
   max-width: 100%;
-  /* aspect-ratio: 1; */
-  /* object-fit: cover; */
   display: block;
 }
 
@@ -60,6 +60,12 @@ body {
 @media (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -124,4 +130,82 @@ body {
   .hero .btn {
     width: max-content;
   }
+}
+
+/* list */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* section */
+.section-heading {
+  color: var(--primary-2);
+}
+
+/* project */
+.project {
+  color: var(--dark-2);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: #d7d7d7 0 0 20px;
+  max-width: fit-content;
+}
+
+.projects .grid {
+  gap: 3rem;
+  justify-items: center;
+}
+
+/* .project__img {
+  max-height: 17rem;
+} */
+
+.project__body {
+  padding: 0 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.project__name {
+  margin: 0;
+  color: #313131;
+}
+
+.project__info {
+  font-weight: var(--fw-regular);
+}
+
+.project__tools {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tool {
+  padding-inline: 1.5rem;
+  background-color: #e6e6e6;
+  width: fit-content;
+  border-radius: 1.5rem;
+  text-transform: capitalize;
+  font-weight: var(--fw-light);
+}
+
+/* links */
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  margin-inline-end: 0.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.icon {
+  color: var(--dark-2);
+  font-size: 2.2rem;
 }
