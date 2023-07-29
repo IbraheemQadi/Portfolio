@@ -142,6 +142,7 @@ body {
 /* section */
 .section-heading {
   color: var(--primary-2);
+  text-transform: capitalize;
 }
 
 /* project */
@@ -151,6 +152,16 @@ body {
   overflow: hidden;
   box-shadow: #d7d7d7 0 0 20px;
   max-width: fit-content;
+  transition: 0.2s ease-out;
+}
+
+.projects .grid:hover > * {
+  opacity: 0.5;
+}
+
+.projects .grid:hover .project:hover {
+  transform: scale(1.02);
+  opacity: 1;
 }
 
 .projects .grid {
