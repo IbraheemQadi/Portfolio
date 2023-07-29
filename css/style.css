@@ -34,7 +34,7 @@ video {
 }
 
 body {
-  background-color: var(--primary-1);
+  /* background-color: var(--primary-1); */
   color: var(--dark-2);
   font-family: var(--ff-base);
   font-size: 2rem;
@@ -55,6 +55,8 @@ body {
 /* grid */
 .grid {
   display: grid;
+  justify-items: center;
+  gap: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -107,7 +109,7 @@ body {
 .hero .author {
   color: var(--primary-2);
   margin: 0;
-  font-size: 5rem;
+  font-size: 4.8rem;
 }
 
 .hero .job {
@@ -143,15 +145,15 @@ body {
 .section-heading {
   color: var(--primary-2);
   text-transform: capitalize;
+  border-bottom: 3px var(--primary-2) solid;
 }
 
 /* project */
 .project {
   color: var(--dark-2);
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
   box-shadow: #d7d7d7 0 0 20px;
-  max-width: fit-content;
   transition: 0.2s ease-out;
 }
 
@@ -164,10 +166,8 @@ body {
   opacity: 1;
 }
 
-.projects .grid {
-  gap: 3rem;
-  justify-items: center;
-}
+/* .projects .grid {
+} */
 
 /* .project__img {
   max-height: 17rem;
@@ -219,4 +219,30 @@ body {
 .icon {
   color: var(--dark-2);
   font-size: 2.2rem;
+}
+
+/* experience */
+
+.experience .job {
+  box-shadow: #d7d7d7 0 0 20px;
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+.experience .role {
+  margin: 0;
+  /* width: max-content; */
+}
+
+.experience .company {
+  color: var(--primary-2);
+}
+
+.experience .date {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.experience .job__body li {
+  margin-bottom: 1rem;
 }
