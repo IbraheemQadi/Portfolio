@@ -94,6 +94,11 @@ a {
 }
 
 /* hero */
+.hero {
+  height: calc(100vh - 6rem);
+  display: flex;
+  place-items: center;
+}
 
 .hero .grid {
   gap: 1rem;
@@ -175,8 +180,9 @@ a {
 /* .projects .grid {
 } */
 
-/* .project__img {
-  max-height: 17rem;
+/* .project__img img {
+  min-height: 17rem;
+  object-fit: cover;
 } */
 
 .project__body {
@@ -316,6 +322,8 @@ textarea::placeholder {
 .footer .copy-right {
   text-transform: uppercase;
   color: var(--primary-2);
+  display: inline-block;
+  padding-bottom: 3rem;
 }
 
 .footer .links {
@@ -346,6 +354,8 @@ textarea::placeholder {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
 }
 
 .nav__list {
@@ -357,7 +367,6 @@ textarea::placeholder {
 .nav__item {
   padding: 1rem 0;
   text-transform: capitalize;
-  border-bottom: 1px solid var(--primary-2, red);
 }
 
 .nav__item > a {
