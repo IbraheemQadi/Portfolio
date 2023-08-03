@@ -259,7 +259,12 @@ a {
 
 .experience .role {
   margin: 0;
-  /* width: max-content; */
+}
+
+@media (min-width: 768px) {
+  .experience .role {
+    width: max-content;
+  }
 }
 
 .experience .company {
@@ -282,16 +287,16 @@ textarea {
   all: unset;
   background-color: var(--card);
   padding: 2rem;
-  box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--primary-2);
+  overflow: hidden;
 }
 
 input::placeholder,
 textarea::placeholder {
   text-transform: capitalize;
   font-weight: var(--fw-regular);
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .sender-info {
@@ -340,10 +345,11 @@ textarea::placeholder {
 }
 
 .footer .copy-right {
-  text-transform: uppercase;
   color: var(--primary-2);
   display: inline-block;
   padding-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .footer .links {
