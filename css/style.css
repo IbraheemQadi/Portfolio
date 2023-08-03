@@ -1,6 +1,6 @@
 :root {
-  --primary-1: #fff; /* #f2f2f2*/
-  --primary-2: #10637d; /* heading */
+  --primary-1: #fff;
+  --primary-2: #5865f2; /* heading */
   --primary-3: #b3c3d7;
   --primary-4: #10f0fc;
   --dark-1: #1c2025;
@@ -13,13 +13,19 @@
   --fw-regular: 400;
   --fw-light: 300;
 
-  --box-shadow: #d7d7d7 0 0 20px;
+  --box-shadow: 0 0 0 0 rgba(30, 32, 41, 1);
   --border-radius: 1rem;
+  /* *********************************************** */
+  --text: #a1a4aa;
+  --backgroud: rgb(36 40 49);
+  --card: rgb(34 36 43);
+  --tool: #2a2d35;
 }
 
 html {
   /* 1 rem = 10px */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -37,13 +43,21 @@ video {
 }
 
 body {
-  background-color: var(--primary-1);
-  color: var(--dark-2);
+  background-color: var(--backgroud);
+  color: var(--text);
   font-family: var(--ff-base);
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2rem);
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3 {
+  color: rgb(227, 228, 232);
+}
+::marker {
+  color: var(--primary-2);
+}
 a {
   text-decoration: none;
 }
@@ -95,7 +109,7 @@ a {
 
 /* hero */
 .hero {
-  height: calc(100vh - 6rem);
+  height: 100vh;
   display: flex;
   place-items: center;
 }
@@ -106,7 +120,7 @@ a {
 }
 
 .hero__img {
-  width: 26rem;
+  width: clamp(21rem, 25vw, 30rem);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -120,11 +134,12 @@ a {
 .hero .author {
   color: var(--primary-2);
   margin: 0;
-  font-size: 4.8rem;
+  font-size: clamp(3.8rem, 4vw, 4.8rem);
 }
 
 .hero .job {
-  font-size: 3rem;
+  color: white;
+  font-size: clamp(2.5rem, 3vw, 3rem);
   padding: 0;
   margin: 0;
   font-weight: var(--fw-bold);
@@ -161,7 +176,7 @@ a {
 
 /* project */
 .project {
-  color: var(--dark-2);
+  background: var(--card);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
@@ -193,7 +208,6 @@ a {
 
 .project__name {
   margin: 0;
-  color: #313131;
 }
 
 .project__info {
@@ -208,7 +222,7 @@ a {
 
 .tool {
   padding-inline: 1.5rem;
-  background-color: #e6e6e6;
+  background-color: var(--tool);
   width: fit-content;
   border-radius: 1.5rem;
   text-transform: capitalize;
@@ -236,6 +250,7 @@ a {
 /* experience */
 
 .experience .job {
+  background: var(--card);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   padding: 2.5rem;
@@ -265,6 +280,7 @@ a {
 .contact input,
 textarea {
   all: unset;
+  background-color: var(--card);
   padding: 2rem;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
@@ -290,6 +306,10 @@ textarea::placeholder {
 .contact-form {
   display: grid;
   gap: 1rem;
+}
+
+.contact .btn {
+  width: max-content;
 }
 
 /* scroll bar */
@@ -347,13 +367,14 @@ textarea::placeholder {
 /* nav */
 
 .nav {
+  background: var(--backgroud);
+  z-index: 1;
   align-items: center;
-  background-color: var(--primary-1);
   box-shadow: var(--box-shadow);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   position: fixed;
   width: 100%;
 }
@@ -370,7 +391,7 @@ textarea::placeholder {
 }
 
 .nav__item > a {
-  color: var(--dark-2);
+  color: var(--primary-2);
   transition: color 0.3s;
 }
 
@@ -414,4 +435,9 @@ textarea::placeholder {
     border: 0;
     padding-inline: 1rem;
   }
+}
+
+#particles-js canvas {
+  z-index: -1;
+  position: fixed;
 }

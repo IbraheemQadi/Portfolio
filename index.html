@@ -19,16 +19,17 @@
     ></script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <nav class="nav collapsible">
       <a class="nav__brand" href="/">IQ</a>
       <svg class="icon nav__toggler">
         <use href="public/icons.svg#menu"></use>
       </svg>
       <ul class="list nav__list collapible__content">
-        <li class="nav__item"><a href="#">about</a></li>
-        <li class="nav__item"><a href="#">experience</a></li>
-        <li class="nav__item"><a href="#">projects</a></li>
-        <li class="nav__item"><a href="#">contact</a></li>
+        <li class="nav__item"><a href="#about">about</a></li>
+        <li class="nav__item"><a href="#experience">experience</a></li>
+        <li class="nav__item"><a href="#projects">projects</a></li>
+        <li class="nav__item"><a href="#contact">contact</a></li>
       </ul>
     </nav>
     <section class="hero">
@@ -44,8 +45,8 @@
             <h1 class="author">Ibraheem Qadi</h1>
             <p class="job">Front End Engineer</p>
             <p class="job_description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-              unde maxime incidunt iusto magni eveniet.
+              Transforming ideas into functional, elegant solutions - let's
+              collaborate!
             </p>
             <a href="index.html" role="button" class="btn btn--primary"
               >Download CV</a
@@ -55,7 +56,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="block container">
         <h2 class="section-heading">about</h2>
         <p class="about__info">
@@ -68,7 +69,7 @@
         </p>
       </div>
     </section>
-    <section class="experience">
+    <section id="experience" class="experience">
       <div class="block container">
         <h2 class="section-heading">experience</h2>
         <div class="grid grid--1x2 grid--1x3">
@@ -109,7 +110,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
       <div class="container block">
         <h2 class="section-heading">Projects</h2>
         <div class="grid grid--1x2 grid--1x3">
@@ -217,10 +218,10 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="block container">
         <h2 class="section-heading">Contact Me</h2>
-        <form class="contact-form" action="">
+        <form class="contact-form" action="" method="post">
           <div class="sender-info">
             <input
               class="input"
@@ -228,22 +229,31 @@
               id="full-name"
               name="full-name"
               placeholder="full-name"
+              required
             />
             <input
               type="email"
               id="email"
               name="email"
               placeholder="E-mail Adress"
+              required
             />
           </div>
-          <input type="text" name="subject" placeholder="Subject field" />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject field"
+            required
+          />
           <textarea
             name="message"
             id="message"
             cols="30"
             rows="10"
             placeholder="Message field"
+            required
           ></textarea>
+          <button type="submit" class="btn btn--primary">Submit</button>
         </form>
       </div>
     </section>
@@ -265,6 +275,13 @@
       <div class="line"></div>
       <span class="copy-right">&copy;2023 - iq | All right reserved</span>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "public/particles.json", function () {
+        console.log("callback - particles.js config loadeddffffffffffffffffff");
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
