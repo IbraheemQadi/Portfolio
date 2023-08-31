@@ -4,15 +4,306 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Ibraheem Qadi</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="public/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <meta property="og:title" content="Ibraheem Qadi" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ibraheemqadi.github.io/Portfolio/"
+    />
+    <meta
+      property="og:description"
+      content="Ibraheem Qadi Portfolio | Frontend Engineer"
+    />
+    <meta property="og:image" content="public/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/731b75a3c3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div id="particles-js"></div>
+    <nav class="nav collapsible">
+      <a class="nav__brand" href="/">IQ</a>
+      <svg class="icon nav__toggler">
+        <use href="public/icons.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapible__content">
+        <li class="nav__item"><a href="#about">about</a></li>
+        <li class="nav__item"><a href="#experience">experience</a></li>
+        <li class="nav__item"><a href="#projects">projects</a></li>
+        <li class="nav__item"><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="container block">
+        <div class="grid grid--1x2">
+          <div class="hero__img">
+            <img
+              src="public/IbraheemQadi.jpg"
+              alt="Ibraheem Qadi personal image"
+            />
+          </div>
+          <div class="hero__header">
+            <h1 class="author">Ibraheem Qadi</h1>
+            <p class="job">Front End Engineer</p>
+            <p class="job_description">
+              Transforming ideas into functional, elegant solutions - let's
+              collaborate!
+            </p>
+            <a
+              download
+              href="public/IbraheemQadiResume.pdf"
+              role="button"
+              class="btn btn--primary"
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="block container">
+        <h2 class="section-heading">about</h2>
+        <p class="about__info">
+          As a computer engineer student, utilizing my skills and experience
+          gained through online courses and my work at a small startup, and to
+          expand my knowledge and expertise in a more professional work
+          environment. I am highly motivated to contribute to the development of
+          innovative solutions and technologies that solve real-world problems
+          while continuously learning and growing as a professional.
+        </p>
+      </div>
+    </section>
+    <section id="experience" class="experience">
+      <div class="block container">
+        <h2 class="section-heading">experience</h2>
+        <div class="grid grid--1x2 grid--1x3">
+          <div class="job">
+            <div class="job__heading">
+              <h3 class="role">Frontend Developer</h3>
+              <div class="company">Treesal · Startup</div>
+              <p class="date">june 2022 - jan 2023</p>
+            </div>
+            <div class="job__body">
+              <ul>
+                <li>
+                  Contribute in buliding AlSaraya Sweets new branch table
+                  ordering system.
+                </li>
+                <li>
+                  Work with Git collaboration tool and Github as the remote.
+                </li>
+                <li>Build admin panel Frontend in HTML/CSS.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <div class="job__heading">
+              <h3 class="role">Frontend Developer Intern</h3>
+              <div class="company">Code With Mosh · Internship</div>
+              <p class="date">june 2022 - ongoing</p>
+            </div>
+            <div class="job__body">
+              <ul>
+                <li>Mastering React from zero to hero Course.</li>
+                <li>Ultimate JavaScript Part 2: Advanced Topics.</li>
+                <li>Ultimate JavaScript Part 1: Fundamentals.</li>
+                <li>Learn Version Control and Collaboration using Git.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="container block">
+        <h2 class="section-heading">Projects</h2>
+        <div class="grid grid--1x2 grid--1x3">
+          <div class="project">
+            <div class="project__img">
+              <img
+                src="public/Moshify.png"
+                alt="Moshify Hosting Platform project"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__header">
+                <h3 class="project__name">Moshify</h3>
+                <div class="links">
+                  <a
+                    target="_blank"
+                    href="https://github.com/IbraheemQadi/Moshify"
+                    ><i class="icon fa-brands fa-github fa-beat"></i
+                  ></a>
+                  <a target="_blank" href="https://my-moshify.netlify.app/"
+                    ><i
+                      class="icon fa-solid fa-up-right-from-square fa-beat"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <p class="project__info">Hosting Platform Landing Page</p>
+              <ul class="project__tools list">
+                <li class="tool">html</li>
+                <li class="tool">css</li>
+                <li class="tool">javaScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__img">
+              <img
+                src="public/Resume.png"
+                alt="Moshify Hosting Platform project"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__header">
+                <h3 class="project__name">Resume</h3>
+                <div class="links">
+                  <a
+                    target="_blank"
+                    href="https://github.com/IbraheemQadi/grayResume"
+                    ><i class="icon fa-brands fa-github fa-beat"></i
+                  ></a>
+                  <a target="_blank" href="https://gray-resum.netlify.app/"
+                    ><i
+                      class="icon fa-solid fa-up-right-from-square fa-beat"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <p class="project__info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                odit delectus obcaecati a voluptas accusamus sint expedita vero
+                voluptate itaque?
+              </p>
+              <ul class="project__tools list">
+                <li class="tool">html</li>
+                <li class="tool">css</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__img">
+              <img
+                src="public/Quran Academy.png"
+                alt="Moshify Hosting Platform project"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__header">
+                <h3 class="project__name">Quran Academy</h3>
+                <div class="links">
+                  <a
+                    target="_blank"
+                    href="https://github.com/IbraheemQadi/QuranAcademyWebProject"
+                    ><i class="icon fa-brands fa-github fa-beat"></i
+                  ></a>
+                  <!-- <a target="_blank" href="index.html"
+                    ><i
+                      class="icon fa-solid fa-up-right-from-square fa-beat"
+                    ></i
+                  ></a> -->
+                </div>
+              </div>
+              <p class="project__info">
+                Lorem ipsum dolor sit amet ctetur adipisicing elit. .
+              </p>
+              <ul class="project__tools list">
+                <li class="tool">html</li>
+                <li class="tool">css</li>
+                <li class="tool">javaScript</li>
+                <li class="tool">tailwind</li>
+                <li class="tool">php</li>
+                <li class="tool">mysql</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="block container">
+        <h2 class="section-heading">Contact Me</h2>
+        <form class="contact-form" action="" method="post">
+          <div class="sender-info">
+            <input
+              class="input"
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="full-name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail Adress"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject field"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message field"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn--primary">Submit</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="links">
+        <a target="_blank" href="https://github.com/IbraheemQadi"
+          ><i class="icon fa-brands fa-github"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=100003497777183"
+          ><i class="icon fa-brands fa-facebook-f"></i
+        ></a>
+        <a target="_blank" href="https://www.linkedin.com/in/ibraheemqadi/"
+          ><i class="icon fa-brands fa-linkedin-in"></i
+        ></a>
+        <a target="_blank" href="mailto:ibra444hem@gmail.com"
+          ><i class="icon fa-solid fa-envelope"></i
+        ></a>
+      </div>
+      <div class="line"></div>
+      <span class="copy-right">&copy;2023 - iq | All right reserved</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "public/particles.json", function () {
+        console.log("callback - particles.js config loadedd");
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
